@@ -1,13 +1,12 @@
 'use client';
 
 import { ReactNode } from 'react';
+
 import { Providers } from '@/app/Providers';
 
 export const Document = ({ children }: { children: ReactNode }) => {
   return (
-    <html
-      lang='en'
-    >
+    <html lang="en">
       <head>
         <meta
           name="apple-mobile-web-app-status-bar-style"

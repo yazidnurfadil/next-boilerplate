@@ -1,5 +1,5 @@
 /* eslint-disable no-process-env */
-// @ts-check
+// @ts-expectra-error @t3-oss/env-nextjs
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 

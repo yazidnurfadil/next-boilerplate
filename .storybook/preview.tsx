@@ -1,5 +1,7 @@
 import React from 'react';
+
 import type { Preview } from '@storybook/react';
+
 import { Providers } from '../app/Providers';
 
 const preview: Preview = {
@@ -11,13 +13,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [
-    (story, context) => (
-      <Providers>
-          {story(context)}
-      </Providers>
-    ),
-  ],
+  decorators: [(story, context) => <Providers>{story(context)}</Providers>],
 };
 
 export default preview;

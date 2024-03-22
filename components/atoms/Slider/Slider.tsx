@@ -1,4 +1,5 @@
-import { Slider } from '@ark-ui/react'
+import { Slider } from '@ark-ui/react';
+
 import './slider.css';
 
 const SliderComp = () => (
@@ -11,6 +12,6 @@ const SliderComp = () => (
       <Slider.Thumb key={0} index={0} />
     </Slider.Control>
   </Slider.Root>
-)
+);
 
-export { SliderComp as Slider }
+export { SliderComp as Slider };

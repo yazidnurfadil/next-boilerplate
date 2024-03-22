@@ -1,5 +1,6 @@
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
+
 import { Button } from './Button';
 
 describe('Button', () => {
@@ -22,8 +23,9 @@ describe('Button', () => {
     const { getByRole } = render(<Button label="foo" size="small" />);
     const button = getByRole('button');
     expect(button.classList).toContain('storybook-button--small');
-
-    const { getByRole: getByRole2 } = render(<Button label="foo" size="large" />);
+    const { getByRole: getByRole2 } = render(
+      <Button label="foo" size="large" />
+    );
     const button2 = getByRole2('button');
     expect(button2.classList).toContain('storybook-button--large');
   });
@@ -34,6 +36,3 @@ describe('Button', () => {
     expect(button.classList).toContain({ backgroundColor: '#123456' });
   });
 });
-
-
-

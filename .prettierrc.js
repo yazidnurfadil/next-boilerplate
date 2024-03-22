@@ -12,7 +12,10 @@ const config = {
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   importOrderParserPlugins: ['jsx', 'typescript'],
-  plugins: ['@trivago/prettier-plugin-sort-imports'],
+  plugins: [
+    '@trivago/prettier-plugin-sort-imports',
+    'prettier-plugin-tailwindcss',
+  ],
 };
 
 module.exports = config;

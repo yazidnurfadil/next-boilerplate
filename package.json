@@ -46,6 +46,7 @@
     "jsdom": "^24.0.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
     "storybook": "^8.0.3",
     "storybook-color-picker": "3",
     "tailwindcss": "^3.3.0",

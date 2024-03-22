@@ -1,9 +1,9 @@
 [data-scope='slider'][data-part='thumb'] {
-  @apply bg-blue-500 w-4 h-4 rounded-full;
+  @apply h-4 w-4 rounded-full bg-blue-500;
 }
 
 [data-scope='slider'][data-part='track'] {
-  @apply bg-gray-300 h-1 flex-1;
+  @apply h-1 flex-1 bg-gray-300;
 }
 
 [data-scope='slider'][data-part='range'] {
