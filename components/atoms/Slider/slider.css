@@ -1,0 +1,15 @@
+[data-scope='slider'][data-part='thumb'] {
+  @apply bg-blue-500 w-4 h-4 rounded-full;
+}
+
+[data-scope='slider'][data-part='track'] {
+  @apply bg-gray-300 h-1 flex-1;
+}
+
+[data-scope='slider'][data-part='range'] {
+  @apply bg-yellow-500;
+}
+
+[data-scope='slider'][data-part='control'] {
+  @apply relative flex items-center;
+}
