@@ -8,7 +8,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
-    'storybook-color-picker',
+    'sb-color-pallete',
   ],
   framework: {
     name: '@storybook/nextjs',

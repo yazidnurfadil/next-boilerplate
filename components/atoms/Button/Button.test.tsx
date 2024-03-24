@@ -5,34 +5,41 @@ import { Button } from './Button';
 
 describe('Button', () => {
   it('renders a button', () => {
-    const { getByRole } = render(<Button label="foo" />);
+    const { getByRole } = render(<Button label="render" />);
     const button = getByRole('button');
     expect(button).toBeDefined();
-    expect(button.innerHTML).equal('foo');
+    expect(button.innerHTML).equal('render');
   });
 
   it('calls onClick when clicked', () => {
     const onClick = vi.fn();
-    const { getByRole } = render(<Button label="foo" onClick={onClick} />);
-    const button = getByRole('button');
+    const { getByText } = render(<Button label="onClick" onClick={onClick} />);
+    const button = getByText('onClick');
     fireEvent.click(button);
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
   it('renders with different sizes', () => {
-    const { getByRole } = render(<Button label="foo" size="small" />);
-    const button = getByRole('button');
-    expect(button.classList).toContain('storybook-button--small');
-    const { getByRole: getByRole2 } = render(
-      <Button label="foo" size="large" />
+    const { getByText } = render(
+      <>
+        <Button label="button small" size="small" />
+        <Button label="button large" size="large" />
+      </>
     );
-    const button2 = getByRole2('button');
-    expect(button2.classList).toContain('storybook-button--large');
+
+    const button = getByText('button small');
+    expect(button.classList).toContain('text-xs');
+
+    const button2 = getByText('button large');
+    expect(button2.classList).toContain('text-lg');
   });
 
   it('renders with different background colors', () => {
-    const { getByRole } = render(<Button label="foo" background="#123456" />);
-    const button = getByRole('button');
-    expect(button.classList).toContain({ backgroundColor: '#123456' });
+    const color = 'bg-blue-500';
+    const { getByText } = render(
+      <Button label="button bg" background={color} />
+    );
+    const button = getByText('button bg');
+    expect(button.classList).toContain(color);
   });
 });

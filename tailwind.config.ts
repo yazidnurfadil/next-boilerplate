@@ -16,5 +16,15 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /bg-.+/,
+      variants: ['lg', 'hover', 'focus', 'lg:hover'],
+    },
+    {
+      pattern: /text-.+/,
+      variants: ['lg', 'hover', 'focus', 'lg:hover'],
+    },
+  ],
 };
 export default config;
