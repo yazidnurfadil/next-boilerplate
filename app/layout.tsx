@@ -1,8 +1,7 @@
 import { ReactNode, Suspense } from 'react';
 
 import type { Metadata } from 'next';
-
-import { Document } from '@/app/Document';
+import { Document } from '~/app/Document';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

@@ -1,5 +1,8 @@
 import type { Config } from 'tailwindcss';
 
+const isStorybook =
+  process.env.npm_package_scripts_build_storybook === 'storybook build';
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,15 +19,17 @@ const config: Config = {
     },
   },
   plugins: [],
-  safelist: [
-    {
-      pattern: /bg-.+/,
-      variants: ['lg', 'hover', 'focus', 'lg:hover'],
-    },
-    {
-      pattern: /text-.+/,
-      variants: ['lg', 'hover', 'focus', 'lg:hover'],
-    },
-  ],
+  safelist: isStorybook
+    ? [
+        {
+          pattern: /bg-.+/,
+          variants: ['lg', 'hover', 'focus', 'lg:hover'],
+        },
+        {
+          pattern: /text-.+/,
+          variants: ['lg', 'hover', 'focus', 'lg:hover'],
+        },
+      ]
+    : [],
 };
 export default config;

@@ -2,7 +2,7 @@
 
 import { ReactNode } from 'react';
 
-import { Providers } from '@/app/Providers';
+import { Providers } from '~/app/Providers';
 
 export const Document = ({ children }: { children: ReactNode }) => {
   return (

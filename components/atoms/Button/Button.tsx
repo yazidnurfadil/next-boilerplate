@@ -1,16 +1,36 @@
-import React from 'react';
+import { forwardRef } from 'react';
+
+import { ark } from '@ark-ui/react/factory';
 
 import { ButtonProps } from './Button.d';
-import btnStyle from './Button.style';
+import styles from './Button.style';
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = (props: ButtonProps) => {
-  const { label, ...restProps } = props;
-  return (
-    <button type="button" className={btnStyle(props)} {...restProps}>
-      {label}
-    </button>
-  );
-};
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (props: ButtonProps, ref) => {
+    const {
+      size,
+      className,
+      text,
+      background,
+      disabled,
+      label,
+      textColor,
+      ...buttonAttrs
+    } = props;
+    const btnClass = styles({
+      size,
+      text,
+      disabled,
+      background,
+      textColor,
+      className,
+    });
+    return (
+      <ark.button className={btnClass} ref={ref} {...buttonAttrs}>
+        {label}
+      </ark.button>
+    );
+  }
+);
+
+Button.displayName = 'Button';

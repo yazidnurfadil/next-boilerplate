@@ -1,4 +1,13 @@
-export interface ButtonProps {
+import { type HTMLArkProps } from '@ark-ui/react/factory';
+import { type VariantProps } from 'tailwind-variants';
+
+import { tvStyle } from './Button.style';
+
+export type ButtonVariantProps = VariantProps<typeof tvStyle>;
+
+export interface ButtonProps
+  extends ButtonVariantProps,
+    HTMLArkProps<'button'> {
   /**
    * What background color to use
    */
@@ -14,11 +23,11 @@ export interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'sm' | 'md' | 'lg';
   /**
    * Button contents
    */
-  label: string;
+  label?: string;
   /**
    * Optional click handler
    */

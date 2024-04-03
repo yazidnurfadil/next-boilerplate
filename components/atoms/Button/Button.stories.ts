@@ -29,7 +29,6 @@ export const Primary: Story = {
     label: 'Button',
   },
 };
-
 export const Text: Story = {
   args: {
     text: true,
@@ -37,18 +36,16 @@ export const Text: Story = {
     label: 'Button',
   },
 };
-
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: 'sm',
     background: 'bg-green-500',
     label: 'Button',
   },
 };
-
 export const Large: Story = {
   args: {
-    size: 'large',
+    size: 'lg',
     background: 'bg-orange-500',
     label: 'Button',
   },
