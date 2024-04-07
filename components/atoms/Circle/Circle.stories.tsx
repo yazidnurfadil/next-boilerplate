@@ -4,6 +4,10 @@ import { Circle } from './Circle';
 
 const meta: Meta<typeof Circle> = {
   component: Circle,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered',
+  },
   title: 'Atoms/Circle',
   argTypes: {
     variant: {

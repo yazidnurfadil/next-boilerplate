@@ -1,3 +1,4 @@
+import { parkwindPlugin } from '@park-ui/tailwind-plugin';
 import type { Config } from 'tailwindcss';
 
 const isStorybook =
@@ -18,7 +19,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [parkwindPlugin],
   safelist: isStorybook
     ? [
         {
@@ -31,5 +32,6 @@ const config: Config = {
         },
       ]
     : [],
+  darkMode: ['class'],
 };
 export default config;

@@ -9,6 +9,10 @@ export interface TextFieldProps
   extends TextFieldVariantsProps,
     HTMLArkProps<'input'> {
   /**
+   * Input label
+   */
+  label?: string;
+  /**
    * What background color to use
    */
   background?: string;

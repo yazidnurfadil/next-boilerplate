@@ -4,15 +4,11 @@ import { Slider } from './Slider';
 
 const meta: Meta<typeof Slider> = {
   component: Slider,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: 'centered',
+  },
   title: 'Atoms/Slider',
-  // argTypes: {
-  //     variant: {
-  //         control: {
-  //             type: "select",
-  //             options: ["orange", "green", "yellow"],
-  //         },
-  //     },
-  // },
   tags: ['autodocs'],
 };
 
